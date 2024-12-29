@@ -43,14 +43,8 @@ document.querySelector(".icon-sync").addEventListener("click", async () => {
     } else {
         translation.innerText = "Translation failed";
     }
-
-    // const sourceLangOption = translated.querySelector(`option[value="${sourceLang}"]`);
-    // const sourceLangContent = sourceLangOption.textContent;
-    // transcript.innerText = sourceLangContent;
-
-    // const targetLangOption = transcript.querySelector(`option[value="${targetLang}"]`);
-    // const targetLangContent = targetLangOption.textContent;
-    // translation.innerText = targetLangContent;
+    transcript.style.display = "none";
+    translated.style.display = "none";
 });
 
 document.querySelector(".icon-audio").addEventListener("click", async () => {

@@ -6,12 +6,12 @@ html, body {
 
 header {
     display: flex;
-    width: 100%;
+    width: auto;
     height: 30px;
     background-color: rgb(200, 200, 200);
     align-items: center;
     justify-content: center;
-    letter-spacing: 20px;
+    letter-spacing: 12px;
     border-bottom: solid rgb(103, 103, 103);
 }
 .container {
@@ -19,13 +19,14 @@ header {
     width: 94%;
     height: 32em;
     margin: 3%;
+    justify-self: center;
     justify-content: center;
     align-content: stretch;
     background-color: rgb(231, 231, 231);
 }
 .input ,.transcription {
     display: grid;
-    width: 16em;
+    width: auto;
     height: 5em;
     border: none;
     font-size: 25px;
@@ -45,8 +46,11 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    bottom: 12%;
+    bottom: 16%;
     cursor: pointer;
+    @media (width >= 768px) {
+        bottom: 14%;
+    }
 }
 .icon-sync {
     display: flex;
@@ -57,9 +61,10 @@ header {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    top: 40%;
+    top: 37%;
     cursor: pointer;
     transform: rotate(90deg);
+    
 }
 .lang-btn {
     display: flex;
@@ -83,11 +88,11 @@ select{
     text-align: center;
     font-size: 15px;   
     cursor: pointer;
-    margin: -9% 0 0 10%;
+    margin: -13% 0 0 10%;
 }
 .translation-btn {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     justify-self: center;
     width: 50%;
     height: 30px;
@@ -105,4 +110,30 @@ select:hover, .translation-btn:hover {
 }
 .icon-audio:hover, .icon-sync:hover{
     background-color: rgb(200, 200, 200);
+}
+
+@media (565px < width < 768px) {
+    .translation-btn{
+        bottom: 4%;
+    }
+    .container {
+        width: 55%;
+        height: 100%;
+        margin: 0;
+    }
+    .input, .transcription {
+        height: 4em;
+    }
+    .icon-sync {
+        top: 35%;
+    }
+}
+
+@media (width >= 768px) {
+    .translation-btn{
+        bottom: 3%;
+    }
+    .container {
+        width: 55%;
+    }
 }
